@@ -1,13 +1,18 @@
 export interface IListRoute {
-  title: string;
-  nameRoute: string;
+  title: string
+  nameRoute: string
 }
 
 export interface IResponse {
   count?: number
   next?: string
   previous?: string
-  results?: IInfoPokemon[]
+  results?: IResultPokemon[]
+}
+
+export interface IResultPokemon {
+  name: string
+  url: string
 }
 
 export interface IInfoPokemon {
@@ -386,3 +391,27 @@ export interface Type2 {
   name: string
   url: string
 }
+
+export interface IChartData {
+  labels: string[]
+  datasets: Dataset[]
+}
+
+export interface Dataset {
+  data: number[]
+}
+
+export interface IOptions {
+  responsive: boolean
+  plugins: Plugins
+}
+
+export interface Plugins {
+  legend: Legend
+}
+
+export interface Legend {
+  display: boolean
+}
+
+

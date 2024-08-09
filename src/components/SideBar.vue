@@ -1,10 +1,10 @@
 <template>
-  <div class="grid grid-cols-1 divide-y border-r-4">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 divide-y">
     <div
       v-for="(item, index) in listRoute"
       :key="index"
       @click="goTo(item.nameRoute)"
-      class="text-left cursor-pointer"
+      class="block px-4 py-2 text-xl text-gray-700 border-r-4 text-left cursor-pointer sm:border-r-0"
     >
       {{ item.title }}
     </div>
@@ -16,11 +16,11 @@ import { router } from '@/routes/route';
 
 const listRoute: IListRoute[] = [
   {
-    title: 'Inicio',
+    title: 'Home',
     nameRoute: 'Home',
   },
   {
-    title: 'Mi Grupo',
+    title: 'My Team',
     nameRoute: 'Team',
   },
 ];

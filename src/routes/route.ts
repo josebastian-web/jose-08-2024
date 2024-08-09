@@ -2,6 +2,7 @@ import { createMemoryHistory, createRouter, RouteRecordRaw } from 'vue-router';
 
 import Home from '@/pages/Home.vue';
 import Team from '@/pages/Team.vue';
+import DetailPokemon from '@/pages/DetailPokemon.vue';
 
 const routes: RouteRecordRaw[] = [
   {
@@ -16,7 +17,8 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: '/team/:id',
-    component: Home
+    component: DetailPokemon,
+    name: 'DetailPokemon'
   },
   // Redirect if not found valid route
   {
